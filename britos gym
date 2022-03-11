@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+html {
+    font-size: 62.5%;
+}
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container {
+    display: grid;
+    grid-template-columns: minmax(300px, 2fr) 3fr;
+    grid-auto-rows: 400px;
+    gap: 15px;
+    background-color: #f9fbf8;
+    border-bottom: 2px solid rgba(82, 82, 82, 0.918);
+    margin-bottom: 50px;
+}
+.container-info {
+    align-self: center;
+    margin-left: 50px;
+}
+.info-title {
+    color: #333;
+    font-size: 4rem;
+    font-weight: bolder;
+    margin-bottom: 24px;
+}
+.info-subtitle {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+}
+.buttom {
+    border: none;
+    border-radius: 20px;
+    color: #333;
+    background-color: #fb8c00;
+    font-weight: bolder;
+    padding:  15px 20px;
+}
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.team {
+    margin: 25px 0;
+    margin-bottom: 50px;
+}
+.team-title {
+    color: #333;
+    font-size: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.team-img {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(75px, 200px));
+    grid-auto-rows: 1fr;
+    gap: 25px;
+    justify-content: center;
+}
+.team-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.team-item__big {
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.couch {
+    margin-bottom: 100px;
+}
+.couch-info {
+    text-align: center;
+}
+.couch-title {
+    color: #333;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+.couch-subtitle {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+.couch-team {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+}
+.couch-team img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@media screen and (max-width: 768px) { 
+    .container {
+        grid-template-columns: minmax(300px, 500px);
+        justify-content: center;
+    }
+    .logo {
+        display: none;
+    }
+    .team-img {
+        grid-template-columns: repeat(auto-fit, minmax(75px, 100px));
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brito´s GYM</title>
+    <link rel="stylesheet" href="brito´sGYM.css">
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="container-info">
+                <h1 class="info-title">Gimnasio <br> BRITO´S GYM</h1>
+                <p class="info-subtitle">!Conoce de nuestros trabajo como instructores¡</p>
+                <button class="buttom"><a href="#equipo" >Conoce a nuestro equipo</a></button>
+            </div>
+            <img class="logo" src="./britos/britos.jpg" alt="Logo del gimnasio">
+        </section>
+        <section id="equipo" class="team">
+            <h2 class="team-title">Nuestras instalaciones</h2>
+            <div class="team-img">
+                <img class="team-item team-item__big" src="./britos/equipo.jpg" alt="Instalaciones de brito´s gym">
+                <img class="team-item" src="./britos/equipo1.jpg" alt="Instalaciones de brito´s gym">
+                <img class="team-item" src="./britos/pesas.jpg" alt="Instalaciones de brito´s gym">
+                <img class="team-item" src="./britos/pesas1.jpg" alt="Instalaciones de brito´s gym">
+                <img class="team-item" src="./britos/pesas2.jpg" alt="Instalaciones de brito´s gym">
+            </div>
+        </section>
+        <section class="couch">
+            <div class="couch-info">
+                <h2 class="couch-title">Nuestros instructores</h2>
+                <p class="couch-subtitle">Todos cuentan con certificaciones y contamos con un licenciado en ciencias en el deporte</p>
+            </div>
+            <div class="couch-team">
+                <img class="cch-team" src="./britos/Noe.jpg" alt="Foto de nuetro instructor">
+                <img class="cch-team" src="./britos/jesus.jpg" alt="Foto de nuetro instructor">
+                <img class="cch-team" src="./britos/ale.jpg" alt="Foto de nuetro instructor">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
